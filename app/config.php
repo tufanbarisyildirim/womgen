@@ -3,9 +3,9 @@
 
     function womgen_autoload($className)
     {
-        if(is_file($className))
+        if(is_file($file = $className . '.php'))
             include $className;
 
-        else if(is_file($file = '../src/' . $className)) 
+        else if(is_file($file = '../src/' . $className . '.php')) 
             include $file;
 }
