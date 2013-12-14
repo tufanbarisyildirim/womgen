@@ -1,11 +1,23 @@
 <?php
     namespace Womgen;
-    
+
     class Womgen
     {
-        public static function GenerateModels($wsdl,$folder)
+        public $wsdl;
+
+        public function __construct($wsdl)
         {
-                $var = simplexml_load_file($wsdl);
-              //$var->xpath('//wsdl:definitions/wsd:types')     
+            $this->wsdl = $wsdl;      
         }
-    }
+        
+        public function GenerateModels($folder = null)
+        {
+            /** 
+            *@var \Womgen\WsdlElement
+            */
+            $var = simplexml_load_file($this->wsdl,'\Womgen\WsdlElement');
+            echo '<pre>';
+            $xml_array = $var->ToArray();
+            echo var_export($xml_array);
+        }
+}

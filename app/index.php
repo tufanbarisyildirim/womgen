@@ -1,6 +1,4 @@
 <?php
     include 'config.php';
-    
-    //from : http://www.webservicex.net/geoipservice.asmx?WSDL
-    Womgen\Womgen::GenerateModels('auxies/geoipservice.wsdl');
-    
+    $webserviceLibraryFolder = dirname(__FILE__) . '/Webservice';
+    Womgen\Womgen::GenerateModels('auxies/geoipservice.wsdl',$webserviceLibraryFolder);

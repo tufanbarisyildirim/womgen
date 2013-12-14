@@ -1,7 +1,7 @@
 <?php
-    namespace Womgen\Ws\SoapClient;
-    
-    class SoapClient extends \SoapClient
+    namespace Womgen\Ws;
+
+    class Client extends \SoapClient
     {
-        
-    }    
+      
+    }
