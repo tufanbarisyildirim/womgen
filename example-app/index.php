@@ -1,4 +1,7 @@
 <?php
     include 'config.php';
     $webserviceLibraryFolder = dirname(__FILE__) . '/Webservice';
-    Womgen\Womgen::GenerateModels('auxies/geoipservice.wsdl',$webserviceLibraryFolder);
+    //::GenerateModels('auxies/geoipservice.wsdl',$webserviceLibraryFolder);
+    
+    $generator = new Womgen\Womgen('auxies/geoipservice.wsdl');
+    $generator->GenerateModels($webserviceLibraryFolder);
