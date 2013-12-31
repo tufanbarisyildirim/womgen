@@ -1,7 +1,7 @@
 <?php
-  namespace Womgen\Wsdl;
-  
-  class Endpoint extends \Womgen\Wsdl\Element
-  {
-      
-  }
+	namespace Womgen\Wsdl;
+
+	class Endpoint extends \Womgen\Wsdl\Element
+	{
+
+	}

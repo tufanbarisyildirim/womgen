@@ -1,10 +1,10 @@
 <?php
-    namespace Womgen\Wsdl;
+	namespace Womgen\Wsdl;
 
-    class Element
-    {
-        public function __cuntstruct()
-        {
-            
-        }
-    }
+	class Element
+	{
+		public function __cuntstruct()
+		{
+
+		}
+	}

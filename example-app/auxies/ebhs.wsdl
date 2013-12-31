@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s3="http://www.bilmed.com.tr" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://www.bilmed.com.tr/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://www.bilmed.com.tr/Form" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.bilmed.com.tr/" />
+      <s:import namespace="http://www.bilmed.com.tr/Form" />
+      <s:element name="TcKimlikNoIleKisiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TcKimlikNoIleKisiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TcKimlikNoIleKisiSorgulaResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TcKimlikNoIleAdresBilgisiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TcKimlikNoIleAdresBilgisiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TcKimlikNoIleAdresBilgisiSorgulaResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenelAdresKisiBilgiSorgulaArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenelAdresKisiBilgiSorgulaArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenelAdresKisiBilgiSorgulaArrayResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlListesi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlListesiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IlListesiResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlceListesi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ilKodu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlceListesiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IlceListesiResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIcelerSql">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIcelerSqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIcelerSqlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EReceteGiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MuayeneId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Logs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EReceteResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EReceteNo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="EReceteGirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EReceteGirisResult" type="tns:EReceteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EReceteSil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MuayeneId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EReceteSilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EReceteSilResult" type="tns:EReceteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlkIstemGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MuayeneId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlkIstemGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IlkIstemGonderResult" type="tns:IlkIstemGonderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IlkIstemGonderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Sonuc" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="HizmetTanimBilgisiAl">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="ArrayOfHizmetTanimBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HizmetTanimBilgisi" nillable="true" type="s1:HizmetTanimBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HizmetTanimBilgisiAlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HizmetTanimBilgisiAlResult" type="tns:ArrayOfHizmetTanimBilgisi" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestTanimBilgisiAl">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="ArrayOfTestTanimBilgileri">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TestTanimBilgileri" nillable="true" type="s1:TestTanimBilgileri" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestTanimBilgisiAlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestTanimBilgisiAlResult" type="tns:ArrayOfTestTanimBilgileri" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MuayeneGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MuayeneId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MuayeneGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MuayeneGonderResult" type="tns:MuayeneGonderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MuayeneGonderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IstemReferansKodu" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OrnekBilgisi" type="s1:HizmetBilgisiCevap" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProtokolBilgisi" type="s2:ProtokolBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetStokTanimBilgileri">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStokTanimBilgileriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStokTanimBilgileriResult" type="tns:StokTanimResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StokTanimResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="StokTanimBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="HizmetIptal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProtokolNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HizmetId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HizmetSunucuRefId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HizmetSunucuWebId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HizmetIptalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HizmetIptalResult" type="tns:HizmetIptalResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HizmetIptalResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IptalResult" type="s1:HizmetKayitIptalCevap" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="TetkikSonucSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrnekId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TetkikSonucSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TetkikSonucSorgulaResult" type="tns:TetkikSonucResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TetkikSonucResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TetkikSonuc" type="s1:TetkikSonucCevap" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetMethods">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="CksMethodInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MethodName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameters" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCksMethodInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CksMethodInfo" nillable="true" type="tns:CksMethodInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMethodsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMethodsResult" type="tns:ArrayOfCksMethodInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bilmed.com.tr/">
+      <s:import namespace="http://www.bilmed.com.tr" />
+      <s:complexType name="HizmetTanimBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HizmetAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SutKodu" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TestTanimBilgileri">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SutKodu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TestAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AltParametreleri" type="s1:ArrayOfTestAltParametreTanimlari" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTestAltParametreTanimlari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TestAltParametreTanimlari" nillable="true" type="s1:TestAltParametreTanimlari" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TestAltParametreTanimlari">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TestAltParametreId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParametreAdi" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrnekBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrnekId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Testler" type="s1:ArrayOfTestBilgisi2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTestBilgisi2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TestBilgisi2" nillable="true" type="s1:TestBilgisi2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TestBilgisi2">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuRefId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuLabId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HizmetKayitIptalItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuRefId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuWebId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IptalAciklama" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IptalSonucKodu" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RadyolojiTetkikBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IncelemeTarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TCKimlikNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReferansId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HizmetAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rapor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Onaylayan" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnayTarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaSoyad" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PatolojiTetkikBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IncelemeTarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TCKimlikNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReferansId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HizmetAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rapor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Onaylayan" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnayTarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaSoyad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BiyopsiNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BiyopsiTarih" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LaboratuarGirisTarih" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TestSonuc">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TestAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sonuc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Degerlendirme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HighLow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Birim" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefMin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefMax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PanikMin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PanikMax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuRefId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TestAltParametreId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SonucTarihi" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CalismaSayisi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="KulturSonuclari" type="s1:ArrayOfSonucItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="MikroorganizmaSonuclari" type="s1:ArrayOfMikroorganizmaSonuc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSonucItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SonucItem" nillable="true" type="s1:SonucItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SonucItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sonuc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMikroorganizmaSonuc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MikroorganizmaSonuc" nillable="true" type="s1:MikroorganizmaSonuc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MikroorganizmaSonuc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Antibiyotikler" type="s1:ArrayOfSonucItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StokTanimBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StokdId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StokAdi" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HizmetBilgisiCevap">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Ornekler" type="s1:ArrayOfOrnekBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrnekBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrnekBilgisi" nillable="true" type="s1:OrnekBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServisListCevapOfHizmetTanimBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Items" type="s1:ArrayOfHizmetTanimBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfHizmetTanimBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HizmetTanimBilgisi" nillable="true" type="s1:HizmetTanimBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HizmetKayitIptalCevap">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Hizmetler" type="s1:ArrayOfHizmetKayitIptalItem" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfHizmetKayitIptalItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HizmetKayitIptalItem" nillable="true" type="s1:HizmetKayitIptalItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServisItemCevapOfRadyolojiTetkikBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Item" type="s1:RadyolojiTetkikBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServisItemCevapOfPatolojiTetkikBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Item" type="s1:PatolojiTetkikBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="WebLoginCevap">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KurumAdi" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KurumId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TetkikSonucCevap">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="OrnekId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SonucTarihi" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="IslemeAlindigiTarih" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="RackId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RackPosition" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UyariMesaji" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CihazReferansKodu" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Onaylayan" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TestSonuclari" type="s1:ArrayOfTestSonuc" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTestSonuc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TestSonuc" nillable="true" type="s1:TestSonuc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServisListCevapOfStokTanimBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Items" type="s1:ArrayOfStokTanimBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfStokTanimBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StokTanimBilgisi" nillable="true" type="s1:StokTanimBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TestTanimBilgileriAlCevap">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TestTanimlari" type="s1:ArrayOfTestTanimBilgileri" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTestTanimBilgileri">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TestTanimBilgileri" nillable="true" type="s1:TestTanimBilgileri" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bilmed.com.tr/Form">
+      <s:import namespace="http://www.bilmed.com.tr" />
+      <s:complexType name="HizmetBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuRefId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HizmetSunucuWebId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProtokolBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:ServisCevap">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="FormProtokolNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="HizmetBilgisi" type="s2:ArrayOfHizmetBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfHizmetBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HizmetBilgisi" nillable="true" type="s2:HizmetBilgisi" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bilmed.com.tr">
+      <s:complexType name="ServisCevap">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SonucKodu" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SonucMesaji" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TcKimlikNoIleKisiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:TcKimlikNoIleKisiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="TcKimlikNoIleKisiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:TcKimlikNoIleKisiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TcKimlikNoIleAdresBilgisiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:TcKimlikNoIleAdresBilgisiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="TcKimlikNoIleAdresBilgisiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:TcKimlikNoIleAdresBilgisiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenelAdresKisiBilgiSorgulaArraySoapIn">
+    <wsdl:part name="parameters" element="tns:GenelAdresKisiBilgiSorgulaArray" />
+  </wsdl:message>
+  <wsdl:message name="GenelAdresKisiBilgiSorgulaArraySoapOut">
+    <wsdl:part name="parameters" element="tns:GenelAdresKisiBilgiSorgulaArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IlListesiSoapIn">
+    <wsdl:part name="parameters" element="tns:IlListesi" />
+  </wsdl:message>
+  <wsdl:message name="IlListesiSoapOut">
+    <wsdl:part name="parameters" element="tns:IlListesiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IlceListesiSoapIn">
+    <wsdl:part name="parameters" element="tns:IlceListesi" />
+  </wsdl:message>
+  <wsdl:message name="IlceListesiSoapOut">
+    <wsdl:part name="parameters" element="tns:IlceListesiResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIcelerSqlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIcelerSql" />
+  </wsdl:message>
+  <wsdl:message name="GetIcelerSqlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIcelerSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="EReceteGirisSoapIn">
+    <wsdl:part name="parameters" element="tns:EReceteGiris" />
+  </wsdl:message>
+  <wsdl:message name="EReceteGirisSoapOut">
+    <wsdl:part name="parameters" element="tns:EReceteGirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="EReceteSilSoapIn">
+    <wsdl:part name="parameters" element="tns:EReceteSil" />
+  </wsdl:message>
+  <wsdl:message name="EReceteSilSoapOut">
+    <wsdl:part name="parameters" element="tns:EReceteSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IlkIstemGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:IlkIstemGonder" />
+  </wsdl:message>
+  <wsdl:message name="IlkIstemGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:IlkIstemGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="HizmetTanimBilgisiAlSoapIn">
+    <wsdl:part name="parameters" element="tns:HizmetTanimBilgisiAl" />
+  </wsdl:message>
+  <wsdl:message name="HizmetTanimBilgisiAlSoapOut">
+    <wsdl:part name="parameters" element="tns:HizmetTanimBilgisiAlResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestTanimBilgisiAlSoapIn">
+    <wsdl:part name="parameters" element="tns:TestTanimBilgisiAl" />
+  </wsdl:message>
+  <wsdl:message name="TestTanimBilgisiAlSoapOut">
+    <wsdl:part name="parameters" element="tns:TestTanimBilgisiAlResponse" />
+  </wsdl:message>
+  <wsdl:message name="MuayeneGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:MuayeneGonder" />
+  </wsdl:message>
+  <wsdl:message name="MuayeneGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:MuayeneGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStokTanimBilgileriSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStokTanimBilgileri" />
+  </wsdl:message>
+  <wsdl:message name="GetStokTanimBilgileriSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStokTanimBilgileriResponse" />
+  </wsdl:message>
+  <wsdl:message name="HizmetIptalSoapIn">
+    <wsdl:part name="parameters" element="tns:HizmetIptal" />
+  </wsdl:message>
+  <wsdl:message name="HizmetIptalSoapOut">
+    <wsdl:part name="parameters" element="tns:HizmetIptalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TetkikSonucSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:TetkikSonucSorgula" />
+  </wsdl:message>
+  <wsdl:message name="TetkikSonucSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:TetkikSonucSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMethodsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMethods" />
+  </wsdl:message>
+  <wsdl:message name="GetMethodsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMethodsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EbhsSoap">
+    <wsdl:operation name="TcKimlikNoIleKisiSorgula">
+      <wsdl:input message="tns:TcKimlikNoIleKisiSorgulaSoapIn" />
+      <wsdl:output message="tns:TcKimlikNoIleKisiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TcKimlikNoIleAdresBilgisiSorgula">
+      <wsdl:input message="tns:TcKimlikNoIleAdresBilgisiSorgulaSoapIn" />
+      <wsdl:output message="tns:TcKimlikNoIleAdresBilgisiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenelAdresKisiBilgiSorgulaArray">
+      <wsdl:input message="tns:GenelAdresKisiBilgiSorgulaArraySoapIn" />
+      <wsdl:output message="tns:GenelAdresKisiBilgiSorgulaArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlListesi">
+      <wsdl:input message="tns:IlListesiSoapIn" />
+      <wsdl:output message="tns:IlListesiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlceListesi">
+      <wsdl:input message="tns:IlceListesiSoapIn" />
+      <wsdl:output message="tns:IlceListesiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIcelerSql">
+      <wsdl:input message="tns:GetIcelerSqlSoapIn" />
+      <wsdl:output message="tns:GetIcelerSqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EReceteGiris">
+      <wsdl:input message="tns:EReceteGirisSoapIn" />
+      <wsdl:output message="tns:EReceteGirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EReceteSil">
+      <wsdl:input message="tns:EReceteSilSoapIn" />
+      <wsdl:output message="tns:EReceteSilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlkIstemGonder">
+      <wsdl:input message="tns:IlkIstemGonderSoapIn" />
+      <wsdl:output message="tns:IlkIstemGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HizmetTanimBilgisiAl">
+      <wsdl:input message="tns:HizmetTanimBilgisiAlSoapIn" />
+      <wsdl:output message="tns:HizmetTanimBilgisiAlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestTanimBilgisiAl">
+      <wsdl:input message="tns:TestTanimBilgisiAlSoapIn" />
+      <wsdl:output message="tns:TestTanimBilgisiAlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MuayeneGonder">
+      <wsdl:input message="tns:MuayeneGonderSoapIn" />
+      <wsdl:output message="tns:MuayeneGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStokTanimBilgileri">
+      <wsdl:input message="tns:GetStokTanimBilgileriSoapIn" />
+      <wsdl:output message="tns:GetStokTanimBilgileriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HizmetIptal">
+      <wsdl:input message="tns:HizmetIptalSoapIn" />
+      <wsdl:output message="tns:HizmetIptalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TetkikSonucSorgula">
+      <wsdl:input message="tns:TetkikSonucSorgulaSoapIn" />
+      <wsdl:output message="tns:TetkikSonucSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMethods">
+      <wsdl:input message="tns:GetMethodsSoapIn" />
+      <wsdl:output message="tns:GetMethodsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EbhsSoap" type="tns:EbhsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TcKimlikNoIleKisiSorgula">
+      <soap:operation soapAction="http://tempuri.org/TcKimlikNoIleKisiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TcKimlikNoIleAdresBilgisiSorgula">
+      <soap:operation soapAction="http://tempuri.org/TcKimlikNoIleAdresBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenelAdresKisiBilgiSorgulaArray">
+      <soap:operation soapAction="http://tempuri.org/GenelAdresKisiBilgiSorgulaArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlListesi">
+      <soap:operation soapAction="http://tempuri.org/IlListesi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlceListesi">
+      <soap:operation soapAction="http://tempuri.org/IlceListesi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIcelerSql">
+      <soap:operation soapAction="http://tempuri.org/GetIcelerSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EReceteGiris">
+      <soap:operation soapAction="http://tempuri.org/EReceteGiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EReceteSil">
+      <soap:operation soapAction="http://tempuri.org/EReceteSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlkIstemGonder">
+      <soap:operation soapAction="http://tempuri.org/IlkIstemGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HizmetTanimBilgisiAl">
+      <soap:operation soapAction="http://tempuri.org/HizmetTanimBilgisiAl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestTanimBilgisiAl">
+      <soap:operation soapAction="http://tempuri.org/TestTanimBilgisiAl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MuayeneGonder">
+      <soap:operation soapAction="http://tempuri.org/MuayeneGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStokTanimBilgileri">
+      <soap:operation soapAction="http://tempuri.org/GetStokTanimBilgileri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HizmetIptal">
+      <soap:operation soapAction="http://tempuri.org/HizmetIptal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TetkikSonucSorgula">
+      <soap:operation soapAction="http://tempuri.org/TetkikSonucSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMethods">
+      <soap:operation soapAction="http://tempuri.org/GetMethods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EbhsSoap12" type="tns:EbhsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TcKimlikNoIleKisiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/TcKimlikNoIleKisiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TcKimlikNoIleAdresBilgisiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/TcKimlikNoIleAdresBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenelAdresKisiBilgiSorgulaArray">
+      <soap12:operation soapAction="http://tempuri.org/GenelAdresKisiBilgiSorgulaArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlListesi">
+      <soap12:operation soapAction="http://tempuri.org/IlListesi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlceListesi">
+      <soap12:operation soapAction="http://tempuri.org/IlceListesi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIcelerSql">
+      <soap12:operation soapAction="http://tempuri.org/GetIcelerSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EReceteGiris">
+      <soap12:operation soapAction="http://tempuri.org/EReceteGiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EReceteSil">
+      <soap12:operation soapAction="http://tempuri.org/EReceteSil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlkIstemGonder">
+      <soap12:operation soapAction="http://tempuri.org/IlkIstemGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HizmetTanimBilgisiAl">
+      <soap12:operation soapAction="http://tempuri.org/HizmetTanimBilgisiAl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestTanimBilgisiAl">
+      <soap12:operation soapAction="http://tempuri.org/TestTanimBilgisiAl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MuayeneGonder">
+      <soap12:operation soapAction="http://tempuri.org/MuayeneGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStokTanimBilgileri">
+      <soap12:operation soapAction="http://tempuri.org/GetStokTanimBilgileri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HizmetIptal">
+      <soap12:operation soapAction="http://tempuri.org/HizmetIptal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TetkikSonucSorgula">
+      <soap12:operation soapAction="http://tempuri.org/TetkikSonucSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMethods">
+      <soap12:operation soapAction="http://tempuri.org/GetMethods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ebhs">
+    <wsdl:port name="EbhsSoap" binding="tns:EbhsSoap">
+      <soap:address location="http://localhost:11203/Ebhs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EbhsSoap12" binding="tns:EbhsSoap12">
+      <soap12:address location="http://localhost:11203/Ebhs.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
